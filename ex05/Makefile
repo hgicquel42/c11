@@ -1,18 +1,19 @@
 NAME	= do-op
 
 SRCS	= \
-	src/ft_atoi.c \
-	src/ft_doop.c \
-	src/ft_putnbr.c \
-	src/ft_putstr.c \
-	src/ft_res.c
+	ft_atoi.c \
+	ft_doop.c \
+	ft_putnbr.c \
+	ft_res.c
 
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -I src/ft.h ${SRCS} -o do-op
+	gcc -Wall -Wextra -Werror ${SRCS} -o do-op
 
 clean:
-	rm ${NAME}
+	rm -f ${NAME}
 
-re:	clean all
+fclean: clean
+
+re:	fclean all
